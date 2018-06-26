@@ -45,7 +45,7 @@ namespace api.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     AccessFailedCount = table.Column<int>(type: "int", nullable: false),
-                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "varchar(MAX)", nullable: true),
                     Email = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
                     GivenName = table.Column<string>(type: "varchar(256)", nullable: true),
@@ -113,7 +113,7 @@ namespace api.Migrations
                 {
                     LoginProvider = table.Column<int>(type: "int", nullable: false),
                     ProviderKey = table.Column<int>(type: "int", nullable: false),
-                    ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
+                    ProviderDisplayName = table.Column<string>(type: "varchar(256)", nullable: true),
                     UserId = table.Column<GuidRouteConstraint>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
