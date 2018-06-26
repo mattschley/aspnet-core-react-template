@@ -1,6 +1,3 @@
-using System;
-using System.Text.RegularExpressions;
-
 namespace aspnetCoreReactTemplate.Services
 {
     public class JwtOptions
